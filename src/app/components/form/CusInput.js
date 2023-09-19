@@ -9,7 +9,7 @@ export default function CusInput({label, title, onUpdate, next, def=""}) {
     useEffect(() => {
         setInputValue(def === "" ? title : def);
         setIsInput(def !== "");
-    }, [def]);
+    }, [def, title]);
 
     function LabelSelect({isInput, label}){
         if( isInput === true)
@@ -38,6 +38,9 @@ export default function CusInput({label, title, onUpdate, next, def=""}) {
     function handleOnChange(e){
         let nextValue = e.target.value
         setInputValue(nextValue);
+        if (nextValue==="")
+            return;
+        onUpdate(nextValue);
     }
 
     return (
