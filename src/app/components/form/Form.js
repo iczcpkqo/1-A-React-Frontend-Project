@@ -1,6 +1,8 @@
 "use client"
 import {useState} from "react";
 import CusInput from "./CusInput"
+import CusDropDown from "./CusDropDown"
+
 
 export default function CusForm() {
 
@@ -46,10 +48,22 @@ export default function CusForm() {
                     />
                 </div>
                 <div className="w-full">
-
+                    <CusDropDown
+                        label="Countries/Region"
+                        title="Please Select a Countries/Region"
+                        data={initCountriesData}
+                        def={nextCountry}
+                        onUpdate={onUpdateCountry}
+                    />
                 </div>
                 <div className="w-full">
-
+                    <CusDropDown
+                        label="Content Language(as available)"
+                        title="Please Select Content Language(as available)"
+                        data={initLangsData}
+                        def={nextLang}
+                        onUpdate={onUpdateLang}
+                    />
                 </div>
             </div>
 
