@@ -1,15 +1,49 @@
 "use client"
 import {useState} from "react";
+import CusInput from "./CusInput"
 
 export default function CusForm() {
 
     const [usersData, setUsersData] = useState(initUserData);
 
+    const [initId, setInitId] = useState(0);
+    const [initEmail, setInitEmail] = useState("");
+    const [initCountry, setInitCountry] = useState(0);
+    const [initLang, setInitLang] = useState(0);
+
+    const [nextEmail, setNextEmail] = useState("");
+    const [nextCountry, setNextCountry] = useState(0);
+    const [nextLang, setNextLang] = useState(0);
+
+    const [refreshId, setRefreshId] = useState(0);
+
+
+    // useEffect(() => {
+    //     setUsersData(initUserData);
+    // }, []);
+
+    function onUpdateEmail(nextEmail) {
+        setNextEmail(nextEmail);
+    }
+
+    function onUpdateCountry(nextCountry) {
+        setNextCountry(nextCountry);
+    }
+
+    function onUpdateLang(nextLang) {
+        setNextLang(nextLang);
+    }
+
     return (
         <div className="w-1/2">
             <div className="border border-blue-400 rounded-2xl px-6 pb-12 pt-6 space-y-3 w-full">
                 <div className="w-full">
-
+                    <CusInput
+                        label="Email Address"
+                        title="Please input the Email Address"
+                        def={nextEmail}
+                        onUpdate={onUpdateEmail}
+                    />
                 </div>
                 <div className="w-full">
 
