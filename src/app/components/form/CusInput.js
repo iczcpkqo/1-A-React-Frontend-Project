@@ -38,7 +38,6 @@ export default function CusInput({label, title, onUpdate, next, def=""}) {
     function handleOnChange(e){
         let nextValue = e.target.value
         setInputValue(nextValue);
-        onUpdate(nextValue);
     }
 
     return (
