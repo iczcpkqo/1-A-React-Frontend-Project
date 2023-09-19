@@ -24,7 +24,7 @@ export default function CusUserList({data, applyUser, countries, langs}) {
                         countries.find((item) => item.id===o.country).name
                     }</span>
                     <span> Language: {
-                        countries.find((item) => item.id===o.lang).name
+                        langs.find((item) => item.id===o.lang).name
                     }</span>
                 </li>
             );

@@ -67,7 +67,10 @@ export default function CusForm() {
 
     function onSave() {
 
-        if (nextEmail === "" || nextCountry === 0 || nextLang === 0)
+        if (nextEmail === "" ||
+            nextCountry === 0 ||
+            nextLang === 0 ||
+            !(/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(nextEmail)) )
             return;
 
         if (initId === 0)
@@ -78,11 +81,11 @@ export default function CusForm() {
                 lang: nextLang
             }]);
         else
-            setUsersData(usersData.map(item=> item.id===initId?{
+            setUsersData(usersData.map(item => item.id === initId ? {
                 email: nextEmail,
                 country: nextCountry,
                 lang: nextLang
-            }:item));
+            } : item));
 
 
         onCancel();
@@ -156,7 +159,7 @@ export default function CusForm() {
 var initUserData = [
     {id: 1, email: 'aaa@gmail.com', country: 1, lang: 1},
     {id: 2, email: 'bbb@gmail.com', country: 2, lang: 2},
-    {id: 3, email: 'bbb@gmail.com', country: 3, lang: 3},
+    {id: 3, email: 'ccc@gmail.com', country: 3, lang: 3},
 ];
 
 const initCountriesData = [
