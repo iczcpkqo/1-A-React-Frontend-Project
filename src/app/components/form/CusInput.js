@@ -1,6 +1,16 @@
 "use client"
 import {useState, useEffect} from "react";
 
+/**
+ * A component, Input box
+ * @param label the description of the field
+ * @param title the text when nothing be input
+ * @param onUpdate A function, Need to passing a parameter, it will be called when the Input  be changed,
+ * @param next ready to set the next value
+ * @param def default value, show in the Input
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function CusInput({label, title, onUpdate, next, def=""}) {
 
     const [isInput, setIsInput] = useState(def !== "");

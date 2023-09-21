@@ -37,6 +37,10 @@ export default function CusForm() {
         setNextLang(nextLang);
     }
 
+
+    /**
+     * Clear all the data in the input and select
+     */
     function onCancel() {
         setInitId(0);
         setInitEmail("");
@@ -48,6 +52,10 @@ export default function CusForm() {
         setNextLang(0);
     }
 
+    /**
+     * Load the data and put it in to Form, when the list be clicked
+     * @param id
+     */
     function onApplyUserData(id) {
         let user = usersData.find((item) => {
             return item.id === id;

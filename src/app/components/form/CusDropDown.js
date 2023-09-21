@@ -2,6 +2,16 @@
 import {SlArrowDown} from 'react-icons/sl'
 import {useEffect, useState} from "react";
 
+/**
+ * A component for Dropdown select
+ * @param label the description of the field
+ * @param title the text when nothing be selected
+ * @param data what will show in the list
+ * @param onUpdate A function, Need to passing a parameter, it will be called when the select be changed,
+ * @param def default value, which will be showed before User select
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function CusList({label, title, data, onUpdate, def = 0}) {
 
     const [isSelected, setIsSelected] = useState(def !== 0);

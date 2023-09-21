@@ -1,10 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 > * Only the front-end is in this repository
 > * All front-end code for task 1 and task 2 is in this repository.
 > * Run 'npm run dev' from the root directory.
+ 
+---
 
-
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 

@@ -1,6 +1,15 @@
 "use client"
 import {useEffect, useState} from "react";
 
+/**
+ * A component, Show Users information
+ * @param data Array, user's data e.g. {id: 1, email: 'aaa@gmail.com', country: 1, lang: 1}
+ * @param applyUser A function, what will happen when the info be clicked
+ * @param countries Array, all the counties, in the data, the param data depend on this field, e.g. {id: 1, name: 'English'},
+ * @param langs Array, all the languages, in the data, the param data depend on this field, e.g. {id: 1, name: 'English'},
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function CusUserList({data, applyUser, countries, langs}) {
     const [users, setUsers] = useState(data)
 

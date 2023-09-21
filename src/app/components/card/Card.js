@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import {TbArrowBigRightFilled} from 'react-icons/tb'
 
+/**
+ * A component for a Card
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function Card() {
     return (
         <div className="rounded-2xl w-full md:w-1/5 inline-block hover:bg-gray-50 hover:shadow-md">

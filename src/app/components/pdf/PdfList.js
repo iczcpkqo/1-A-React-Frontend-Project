@@ -3,6 +3,11 @@ import {useState} from "react";
 import axios from 'axios';
 import ajax from "@/app/components/api/ajax";
 
+/**
+ * a component for processing pdf
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function PdfList() {
 
     const [selectedFile, setSelectedFile] = useState(null);
@@ -65,7 +70,6 @@ export default function PdfList() {
                     onClick={loadFiles}>
                 get files
             </button>
-            {/*<ShowFiles files={}/>*/}
             <ul>
                 {files.map((o,i)=>{
                     return <li key={i} value={o}>{o}
