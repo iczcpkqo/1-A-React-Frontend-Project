@@ -90,6 +90,7 @@ export default function CusForm() {
             }]);
         else
             setUsersData(usersData.map(item => item.id === initId ? {
+                id: initId,
                 email: nextEmail,
                 country: nextCountry,
                 lang: nextLang
