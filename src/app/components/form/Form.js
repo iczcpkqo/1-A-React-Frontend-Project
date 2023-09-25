@@ -83,7 +83,7 @@ export default function CusForm() {
 
         if (initId === 0)
             setUsersData([...usersData, {
-                id: initUserData.at(-1).id + 1,
+                id: usersData.at(-1).id + 1,
                 email: nextEmail,
                 country: nextCountry,
                 lang: nextLang
